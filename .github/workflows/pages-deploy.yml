@@ -25,6 +25,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      artifact_id: ${{ steps.upload.outputs.artifact_id }}
 
     steps:
       - name: Checkout
@@ -58,6 +60,7 @@ jobs:
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
+        id: upload
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
@@ -72,3 +75,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  deploy-fit:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Trigger Server Webhook
+        run: |
+          curl -X POST "https://hooks.stories.theargo.space/hooks/update-stories" \
+          -H "Content-Type: application/json" \
+          -H "X-Hub-Signature: ${{ secrets.WEBHOOK_SECRET }}" \
+          -d '{"artifact_id": "${{ needs.build.outputs.artifact_id }}"}'
