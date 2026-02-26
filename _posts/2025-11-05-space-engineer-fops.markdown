@@ -2,7 +2,7 @@
 layout: post
 title:  "Space Engineer Fops"
 description: Here to check your pipes, ability to breathe, and maybe offer a fireman's lift.
-author: [StealthCT, Galleta]
+author: [Beanie, Galleta]
 date:   2025-11-05 22:50:00 +0000
 categories: [art]
 tags: [floof, tidus, art]

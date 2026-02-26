@@ -2,7 +2,7 @@
 layout: post
 title:  "Unit of Interest"
 description: one of NT's off-book associates offer to help.
-author: [StealthCT]
+author: [Beanie]
 date:   2025-11-04 21:17:00 +0000
 categories: [story]
 tags: [tara, unit 7, floof]

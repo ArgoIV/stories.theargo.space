@@ -2,7 +2,7 @@
 layout: post
 title:  "A Scarf's Journey"
 description: Where did the scarf come from? Where is it going? Who sniffed it first?
-author: [StealthCT, Penny]
+author: [Beanie, Penny]
 date:   2025-05-02 11:15:00 +0100
 categories: [art]
 tags: [story, paradise, tidus, claire, eather, art, in-game]

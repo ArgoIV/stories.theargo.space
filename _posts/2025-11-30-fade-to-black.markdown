@@ -2,7 +2,7 @@
 layout: post
 title:  "Fade To Black"
 description: As the coldness of space surrounds Tara, she comes to terms with it all.
-author: [StealthCT, Boomsta]
+author: [Beanie, Boomsta]
 date:   2025-11-30 09:10:00 +0000
 categories: [story, art]
 tags: [tara, death, in-game, floof]
