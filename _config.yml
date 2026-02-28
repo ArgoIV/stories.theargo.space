@@ -36,6 +36,7 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Beanie
   email: beanie@theargo.space # change to your email address
+  fediverse_handle: "@beanie@tech.lgbt"
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/stealthii # change to your GitHub homepage
