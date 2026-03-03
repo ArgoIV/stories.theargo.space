@@ -1,0 +1,305 @@
+@mixin styles {
+  color-scheme: dark;
+
+  /* Framework color */
+  --main-bg: #0c080a; /* Deep Void */
+  --mask-bg: rgba(12, 8, 10, 0.8);
+  --main-border-color: #382029;
+
+  /* Common color */
+  --text-color: #f2e3d5; /* Starlight Sand */
+  --text-muted-color: #a69587; /* Weathered Sand */
+  --text-muted-highlight-color: #d4c3b6;
+  --heading-color: #f2e3d5;
+  --label-color: #a69587;
+  --blockquote-border-color: #bf3465; /* Argo Rose */
+  --blockquote-text-color: #a69587;
+  --link-color: #e0457b; /* Brightened Rose for links */
+  --link-underline-color: #382029;
+  --button-bg: #170f13; /* Bulkhead Surface */
+  --btn-border-color: #382029;
+  --btn-backtotop-color: #f2e3d5;
+  --btn-backtotop-border-color: #382029;
+  --card-header-bg: #170f13;
+  --checkbox-color: #382029;
+  --checkbox-checked-color: #bf3465;
+  --img-bg: radial-gradient(circle, #170f13 0%, #0c080a 100%);
+  --shimmer-bg: linear-gradient(
+    90deg,
+    rgba(23, 15, 19, 0) 0%,
+    rgba(56, 32, 41, 0.4) 50%,
+    rgba(23, 15, 19, 0) 100%
+  );
+
+  /* Sidebar */
+  --site-title-color: #f2e3d5;
+  --site-subtitle-color: #bf3465;
+  --sidebar-bg: #170f13;
+  --sidebar-border-color: #382029;
+  --sidebar-muted-color: #a69587;
+  --sidebar-active-color: #bf3465;
+  --sidebar-hover-bg: #22161c;
+  --sidebar-btn-bg: #0c080a;
+  --sidebar-btn-color: #a69587;
+  --avatar-border-color: #bf3465;
+
+  /* Topbar */
+  --topbar-bg: rgba(12, 8, 10, 0.85); /* Deep Void w/ transparency for blur */
+  --topbar-text-color: #f2e3d5;
+  --search-border-color: #382029;
+  --search-icon-color: #a69587;
+  --input-focus-border-color: #bf3465;
+
+  /* Home page */
+  --post-list-text-color: #f2e3d5;
+  --btn-patinator-text-color: #f2e3d5;
+  --btn-paginator-hover-color: #22161c;
+
+  /* Posts */
+  --toc-highlight: #bf3465;
+  --toc-popup-border-color: #382029;
+  --tag-hover: #382029;
+  --tb-odd-bg: #170f13; /* odd rows of the posts' table */
+  --tb-even-bg: #0c080a; /* even rows of the posts' table */
+  --tb-border-color: #382029;
+  --footnote-target-bg: #382029;
+  --btn-share-color: #a69587;
+  --btn-share-hover-color: #bf3465;
+  --card-bg: #170f13;
+  --card-hover-bg: #22161c;
+  --card-shadow: rgba(0, 0, 0, 0.72) 0 6px 18px 0,
+    rgba(191, 52, 101, 0.15) 0 0 0 1px; /* Subtle rose glow on card borders */
+  --kbd-wrap-color: #382029;
+  --kbd-text-color: #f2e3d5;
+  --kbd-bg-color: #0c080a;
+  
+  /* Callout Prompts (Mapped to Instatus Colors) */
+  --prompt-text-color: #f2e3d5;
+  --prompt-tip-bg: rgba(108, 141, 117, 0.15); /* Vintage Olive */
+  --prompt-tip-icon-color: #6c8d75;
+  --prompt-info-bg: rgba(82, 96, 109, 0.2); /* Cold Steel */
+  --prompt-info-icon-color: #52606d;
+  --prompt-warning-bg: rgba(196, 154, 69, 0.15); /* Brassy Amber */
+  --prompt-warning-icon-color: #c49a45;
+  --prompt-danger-bg: rgba(204, 41, 41, 0.15); /* Constructivist Red */
+  --prompt-danger-icon-color: #cc2929;
+
+  /* Tags */
+  --tag-border: #382029;
+  --tag-shadow: #0c080a;
+  --dash-color: #382029;
+  --search-tag-bg: #170f13;
+
+  /* Categories */
+  --categories-border: #382029;
+  --categories-hover-bg: #22161c;
+  --categories-icon-hover-color: #bf3465;
+
+  /* Archive */
+  --timeline-node-bg: #a69587;
+  --timeline-color: #382029;
+  --timeline-year-dot-color: #bf3465;
+
+  /* Code highlight colors */
+  --language-border-color: #382029;
+  --highlight-bg-color: #090507; /* Super deep void for code blocks */
+  --highlighter-rouge-color: #bf3465;
+  --highlight-lineno-color: #5c4a41;
+  --inline-code-bg: rgba(191, 52, 101, 0.1);
+  --code-color: #f2e3d5;
+  --code-header-text-color: #a69587;
+  --code-header-muted-color: #382029;
+  --code-header-icon-color: #a69587;
+  --clipboard-checked-color: #6c8d75; /* Vintage Olive */
+  --filepath-text-color: #d4c3b6;
+
+  .light {
+    display: none;
+  }
+
+  /* Categories */
+  .categories.card,
+  .list-group-item {
+    background-color: var(--card-bg);
+  }
+
+  .categories {
+    .card-header {
+      background-color: var(--card-header-bg);
+    }
+
+    .list-group-item {
+      border-left: none;
+      border-right: none;
+      padding-left: 2rem;
+      border-color: var(--categories-border);
+
+      &:last-child {
+        border-bottom-color: var(--card-bg);
+      }
+    }
+  }
+
+  #archives li:nth-child(odd) {
+    background-image: linear-gradient(
+      to left,
+      #0c080a,
+      #170f13,
+      #170f13,
+      #170f13,
+      #0c080a
+    );
+  }
+
+  /* stylelint-disable-next-line selector-id-pattern */
+  #disqus_thread {
+    color-scheme: none;
+  }
+
+  /* --- Syntax highlight theme from `rougify style base16.dark` (Warmed up) --- */
+
+  .highlight .gp {
+    color: #a69587;
+  }
+
+  .highlight table td {
+    padding: 5px;
+  }
+
+  .highlight table pre {
+    margin: 0;
+  }
+
+  .highlight,
+  .highlight .w {
+    color: #f2e3d5;
+    background-color: #090507;
+  }
+
+  .highlight .err {
+    color: #f2e3d5;
+    background-color: #cc2929; /* Constructivist Red */
+  }
+
+  .highlight .c,
+  .highlight .ch,
+  .highlight .cd,
+  .highlight .cm,
+  .highlight .cpf,
+  .highlight .c1,
+  .highlight .cs {
+    color: #8c7a6e;
+  }
+
+  .highlight .cp {
+    color: #c49a45; /* Brassy Amber */
+  }
+
+  .highlight .nt {
+    color: #c49a45;
+  }
+
+  .highlight .o,
+  .highlight .ow {
+    color: #f2e3d5;
+  }
+
+  .highlight .p,
+  .highlight .pi {
+    color: #f2e3d5;
+  }
+
+  .highlight .gi {
+    color: #6c8d75; /* Vintage Olive */
+  }
+
+  .highlight .gd {
+    color: #cc2929;
+    background-color: #382029;
+  }
+
+  .highlight .gh {
+    color: #52606d; /* Cold Steel */
+    background-color: #170f13;
+    font-weight: bold;
+  }
+
+  .highlight .k,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .kv {
+    color: #bf3465; /* Argo Rose */
+  }
+
+  .highlight .kc {
+    color: #c26747; /* Rusted Terracotta */
+  }
+
+  .highlight .kt {
+    color: #c26747;
+  }
+
+  .highlight .kd {
+    color: #c26747;
+  }
+
+  .highlight .s,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .dl,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .sh,
+  .highlight .sx,
+  .highlight .s1 {
+    color: #6c8d75;
+  }
+
+  .highlight .sa {
+    color: #bf3465;
+  }
+
+  .highlight .sr {
+    color: #7b9c84;
+  }
+
+  .highlight .si {
+    color: #d4a954;
+  }
+
+  .highlight .se {
+    color: #d4a954;
+  }
+
+  .highlight .nn {
+    color: #c49a45;
+  }
+
+  .highlight .nc {
+    color: #c49a45;
+  }
+
+  .highlight .no {
+    color: #c49a45;
+  }
+
+  .highlight .na {
+    color: #52606d;
+  }
+
+  .highlight .m,
+  .highlight .mb,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .il,
+  .highlight .mo,
+  .highlight .mx {
+    color: #6c8d75;
+  }
+
+  .highlight .ss {
+    color: #6c8d75;
+  }
+}
