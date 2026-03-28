@@ -1,0 +1,243 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == "production" -%}
+  .bundle
+{%- endif -%}
+';
+
+/* === THE ARGO: AESTHETIC OVERRIDES ===
+ * Colors and fonts matching the Argo network aesthetic identity.
+ * Palette reference: https://theargo.space/aesthetics/
+ */
+
+/* --- Font imports from The Argo font server --- */
+
+@font-face {
+  font-family: 'Monaspace Krypton';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url('https://theargo.space/fonts/Monaspace-Krypton-Var.woff2')
+    format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'RussoArgo';
+  src: url('https://theargo.space/fonts/RussoArgo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Korolev';
+  src: url('https://theargo.space/fonts/Korolev-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://theargo.space/fonts/Oswald-Variable.woff2')
+    format('woff2-variations');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://theargo.space/fonts/Barlow-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://theargo.space/fonts/Barlow-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://theargo.space/fonts/Inter-Variable.woff2')
+    format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://theargo.space/fonts/Inter-Italic-Variable.woff2')
+    format('woff2-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --- Font family overrides --- */
+
+body {
+  font-family:
+    'Barlow',
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Korolev', 'Oswald', 'Arial Black', Impact, sans-serif;
+}
+
+#sidebar .site-title {
+  font-family: 'RussoArgo', 'Arial Black', Impact, sans-serif;
+  font-weight: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Monaspace Krypton', 'Courier New', Courier, monospace;
+  font-weight: 200;
+  font-feature-settings:
+    'calt' 1,
+    'liga' 1,
+    'ss01' 1,
+    'ss02' 1,
+    'ss03' 1,
+    'ss04' 1,
+    'ss05' 1,
+    'ss06' 1,
+    'ss07' 1,
+    'ss08' 1,
+    'ss09' 1,
+    'ss10' 1;
+}
+
+/* --- Dark theme color overrides (Argo hull palette) --- */
+
+html[data-mode='dark'] {
+  /* Framework */
+  --main-bg: #0c080a;
+  --mask-bg: #382029;
+  --main-border-color: #382029;
+
+  /* Common */
+  --text-color: #f2e3d5;
+  --text-muted-color: #a69587;
+  --text-muted-highlight-color: #c4b0a1;
+  --heading-color: #f2e3d5;
+  --label-color: #a69587;
+  --blockquote-border-color: #382029;
+  --blockquote-text-color: #a69587;
+  --link-color: #bf3465;
+  --link-underline-color: #7a2244;
+  --button-bg: #170f13;
+  --btn-border-color: #382029;
+  --btn-backtotop-border-color: #251319;
+  --card-header-bg: #1c1218;
+  --checkbox-color: #5a3840;
+  --checkbox-checked-color: #bf3465;
+  --img-bg: radial-gradient(circle, #120b0e 0%, #1a1015 100%);
+  --shimmer-bg: linear-gradient(
+    90deg,
+    rgb(242 227 213 / 0%) 0%,
+    rgb(56 32 41 / 40%) 50%,
+    rgb(242 227 213 / 0%) 100%
+  );
+
+  /* Sidebar */
+  --site-title-color: #f2e3d5;
+  --site-subtitle-color: #a69587;
+  --sidebar-bg: #170f13;
+  --sidebar-border-color: #382029;
+  --sidebar-muted-color: #a69587;
+  --sidebar-active-color: #f2e3d5;
+  --sidebar-hover-bg: #221318;
+  --sidebar-btn-bg: #1c0f15;
+  --sidebar-btn-color: #a69587;
+  --avatar-border-color: rgb(242 227 213 / 90%);
+
+  /* Topbar */
+  --topbar-bg: rgb(12 8 10 / 64%);
+  --search-border-color: #382029;
+  --search-icon-color: #7d6a5e;
+  --input-focus-border-color: #bf3465;
+
+  /* Home page */
+  --post-list-text-color: #f2e3d5;
+  --btn-paginator-hover-color: #221318;
+
+  /* Posts */
+  --toc-highlight: #bf3465;
+  --toc-popup-border-color: #382029;
+  --tag-hover: rgb(56 32 41);
+  --tb-odd-bg: #170f13;
+  --tb-even-bg: #120b0e;
+  --tb-border-color: #170f13;
+  --footnote-target-bg: #6b1e35;
+  --btn-share-color: #a69587;
+  --btn-share-hover-color: #f2e3d5;
+  --card-bg: #170f13;
+  --card-hover-bg: #382029;
+  --card-shadow: rgb(12 8 10 / 72%) 0 6px 18px 0, rgb(56 32 41 / 24%) 0 0 0 1px;
+  --kbd-wrap-color: #382029;
+  --kbd-text-color: #f2e3d5;
+  --kbd-bg-color: #170f13;
+  --prompt-text-color: rgb(242 227 213 / 75%);
+  --prompt-danger-bg: rgb(86 20 40 / 80%);
+
+  /* Tags */
+  --tag-border: #382029;
+  --tag-shadow: #170f13;
+  --dash-color: #382029;
+  --search-tag-bg: #170f13;
+
+  /* Categories */
+  --categories-border: rgb(56 32 41 / 50%);
+  --categories-hover-bg: #382029;
+  --categories-icon-hover-color: #f2e3d5;
+
+  /* Archive */
+  --timeline-node-bg: #a69587;
+  --timeline-color: #382029;
+  --timeline-year-dot-color: #382029;
+
+  /* Code highlight */
+  --language-border-color: #382029;
+  --highlight-bg-color: #0a0608;
+  --highlighter-rouge-color: #e8c0d0;
+  --highlight-lineno-color: #7d6a5e;
+  --inline-code-bg: rgb(191 52 101 / 10%);
+  --code-color: #f2e3d5;
+  --code-header-text-color: #a69587;
+  --code-header-muted-color: #382029;
+  --code-header-icon-color: #7d6a5e;
+  --filepath-text-color: #f2e3d5;
+}
+
+/* Override hardcoded %link-hover color (was #d2603a) */
+.content a:not(.img-link):hover,
+footer a:hover {
+  color: #e0457b !important;
+  border-bottom-color: #e0457b;
+}
