@@ -235,6 +235,21 @@ html[data-mode='dark'] {
   --filepath-text-color: #f2e3d5;
 }
 
+/* Avatar: remove circle clip, ring, and zoom-on-hover */
+#sidebar #avatar {
+  border-radius: 0 !important;
+  box-shadow: none;
+  overflow: visible;
+
+  img {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
 /* Override hardcoded %link-hover color (was #d2603a) */
 .content a:not(.img-link):hover,
 footer a:hover {
