@@ -218,7 +218,6 @@ exclude:
   # Source files
   - "assets/music/*.flac"
   - "assets/images/**/*.png"
-  - "assets/images/**/*.jpeg"
 
 jekyll-archives:
   enabled: [categories, tags]
